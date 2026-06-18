@@ -136,9 +136,28 @@ navbar_title: Travel
   const gallery = document.getElementById("travel-gallery");
   const empty = document.getElementById("travel-empty");
   const exts = /\.(jpg|jpeg|png|webp|gif)$/i;
+  const captionRules = [
+    { keys: ["aurora", "abisko", "jiguang", "极光"], title: "Aurora in Abisko" },
+    { keys: ["austria", "austrian"], title: "Austrian Lake District" },
+    { keys: ["grass", "omuro", "大室山"], title: "Mount Ōmuro, Japan" },
+    { keys: ["spian", "spain", "gran", "canaria"], title: "Gran Canaria" },
+    { keys: ["tokyo", "shibuya"], title: "Shibuya Crossing in Tokyo" }
+  ];
+
+  function fallbackTitle(name) {
+    return name
+      .replace(/\.[^.]+$/, "")
+      .replace(/[-_]+/g, " ")
+      .split(" ")
+      .filter(Boolean)
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
 
   function titleFromName(name) {
-    return name.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    const lower = name.toLowerCase();
+    const matched = captionRules.find(rule => rule.keys.some(key => lower.includes(key.toLowerCase())));
+    return matched ? matched.title : fallbackTitle(name);
   }
 
   fetch(api)
