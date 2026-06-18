@@ -32,34 +32,28 @@ short_bio: >-
 
 education:
 - name: Technische Universität Berlin
-  logo: /assets/images/badges/tu.svg
   dept: Joint program with Huawei Munich Research Center
   position: Ph.D. in AI Security
   date: Aug. 2024 - Present
 - name: KTH Royal Institute of Technology
-  logo: /assets/images/badges/kth.svg
   dept: Security and Mobile Computing
   position: M.Sc.
   date: Sep. 2021 - Jun. 2023
 - name: Southeast University
-  logo: /assets/images/badges/seu.svg
   dept: School of Information Science and Engineering
   position: B.Eng. in Information Engineering
   date: Sep. 2018 - Jun. 2022
 
 experience:
 - name: Huawei Munich Research Center
-  logo: /assets/images/badges/huawei.svg
   dept: AI Security and Privacy-Preserving Computing
   position: Industrial PhD Research Intern
   date: Aug. 2024 - Present
 - name: Huawei Technologies Co., Ltd.
-  logo: /assets/images/badges/huawei.svg
   dept: 2012 Labs
   position: Cybersecurity and Privacy Engineer
   date: Sep. 2023 - Jul. 2024
 - name: Ericsson Stockholm
-  logo: /assets/images/badges/ericsson.svg
   dept: Master Thesis Project
   position: Master Thesis Student
   date: Jan. 2023 - Jun. 2023
